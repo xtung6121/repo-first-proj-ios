@@ -15,7 +15,7 @@
 		151257CB2ED9FA47007227AB /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257CA2ED9FA47007227AB /* LoginViewController.swift */; };
 		151257CD2ED9FA5E007227AB /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151257CC2ED9FA5E007227AB /* LoginViewController.xib */; };
 		151257CF2EDA006C007227AB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257CE2EDA006C007227AB /* SignUpViewController.swift */; };
-		151257D12EDA0083007227AB /* SignUoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151257D02EDA0083007227AB /* SignUoViewController.xib */; };
+		151257D12EDA0083007227AB /* SignUpViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151257D02EDA0083007227AB /* SignUpViewController.xib */; };
 		151257D32EDB42CA007227AB /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257D22EDB42CA007227AB /* AppFlowController.swift */; };
 		151257D52EDB42F7007227AB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257D42EDB42F7007227AB /* AuthManager.swift */; };
 		151257D72EDB4342007227AB /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257D62EDB4342007227AB /* MainTabBarController.swift */; };
@@ -34,7 +34,7 @@
 		151257CA2ED9FA47007227AB /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		151257CC2ED9FA5E007227AB /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
 		151257CE2EDA006C007227AB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
-		151257D02EDA0083007227AB /* SignUoViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUoViewController.xib; sourceTree = "<group>"; };
+		151257D02EDA0083007227AB /* SignUpViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpViewController.xib; sourceTree = "<group>"; };
 		151257D22EDB42CA007227AB /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		151257D42EDB42F7007227AB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		151257D62EDB4342007227AB /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
@@ -97,7 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				151257CE2EDA006C007227AB /* SignUpViewController.swift */,
-				151257D02EDA0083007227AB /* SignUoViewController.xib */,
+				151257D02EDA0083007227AB /* SignUpViewController.xib */,
 			);
 			path = SignUp;
 			sourceTree = "<group>";
@@ -182,7 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				151257C02ED9F2B9007227AB /* LaunchScreen.storyboard in Resources */,
-				151257D12EDA0083007227AB /* SignUoViewController.xib in Resources */,
+				151257D12EDA0083007227AB /* SignUpViewController.xib in Resources */,
 				151257DB2EDB43FB007227AB /* HomeViewController.xib in Resources */,
 				151257BD2ED9F2B9007227AB /* Assets.xcassets in Resources */,
 				151257CD2ED9FA5E007227AB /* LoginViewController.xib in Resources */,
