@@ -21,21 +21,22 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zv9-bZ-8qN">
-                    <rect key="frame" x="0.0" y="0.0" width="400" height="100"/>
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="46"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="usA-54-EXs">
-                            <rect key="frame" x="12" y="12" width="376" height="76"/>
+                            <rect key="frame" x="12" y="12" width="376" height="22"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4X1-0r-L6z">
-                                    <rect key="frame" x="0.0" y="0.0" width="24" height="76"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="24" height="22"/>
                                     <constraints>
+                                        <constraint firstAttribute="height" constant="24" id="3Ib-7e-GIQ"/>
                                         <constraint firstAttribute="width" constant="24" id="uhG-WW-NLd"/>
                                     </constraints>
                                     <state key="normal" title="Button"/>
                                     <buttonConfiguration key="configuration" style="plain" image="47"/>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UYc-Nf-KkN">
-                                    <rect key="frame" x="24" y="0.0" width="352" height="76"/>
+                                    <rect key="frame" x="24" y="0.0" width="352" height="22"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>

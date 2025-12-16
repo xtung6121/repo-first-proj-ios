@@ -27,8 +27,8 @@ class AppFlowController {
     }
     
     func showMainApp() {
-        let tabBar = MainTabBarController()
-        window?.rootViewController = tabBar
+//        let tabBar = MainTabBarController()
+//        window?.rootViewController = tabBar
     }
     
     func logout() {

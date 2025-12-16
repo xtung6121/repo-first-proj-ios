@@ -40,7 +40,10 @@ class MChecked: UIView {
     }
     
     private func setupViews() {
-        btnCheckedOrUncheck.setImage(UIImage(named: "47"), for: .normal)
+        btnCheckedOrUncheck.imageView?.contentMode = .scaleToFill
+        contentView.backgroundColor = .white
+        containerView.backgroundColor = .white
+        btnCheckedOrUncheck.setImage(UIImage(named: "47.svg"), for: .normal)
         lbText.font = .systemFont(ofSize: 13)
         lbText.textColor = .black
     }

@@ -59,7 +59,7 @@ class SignUpViewController: UIViewController {
     }
     
     private func setupViewCheckedTermAndConditions() {
-        btnChecked.configView(text: "Our term")
+        btnChecked.configView(text: "By creating an account your aggree to our  Term and Condtions")
     }
     
     private func setupViewBtn() {

@@ -1,69 +1,57 @@
-//
-//  MButton.swift
-//  smart-ranking-badminton
-//
-//  Created by macmimi on 03/12/25.
-//
-
 import UIKit
 
 @IBDesignable
-class MButton: UIView {
+final class MButton: UIButton {
     
-    // MARK: - Outlets
-    @IBOutlet private var contentView: UIView!
-    @IBOutlet private weak var containerView: UIView!
-    @IBOutlet private weak var buttonSignIn: UIButton!
+    // MARK: - Closure
+    var onTap: (() -> Void)?
+    
+    // Loading indicator
+    private lazy var activityIndicator: UIActivityIndicatorView = {
+        let indicator = UIActivityIndicatorView(style: .medium)
+        indicator.color = .white
+        indicator.hidesWhenStopped = true
+        indicator.translatesAutoresizingMaskIntoConstraints = false
+        return indicator
+    }()
     
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        commonInit()
+        setupButton()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        commonInit()
+        setupButton()
     }
     
-    private func commonInit() {
-        loadXib()
-        setupViews()
-    }
-    
-    // MARK: - Load XIB
-    private func loadXib() {
-        let bundle = Bundle(for: type(of: self))
-        bundle.loadNibNamed("MButton", owner: self, options: nil)
-        
-        addSubview(contentView)
-        contentView.translatesAutoresizingMaskIntoConstraints = false
-        
+    // MARK: - Setup chung
+    private func setupButton() {
+        // Style mặc định đẹp
+        backgroundColor = .systemBlue
+        setTitleColor(.white, for: .normal)
+        titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        layer.cornerRadius = 15
+        clipsToBounds = true
+//        contentEdgeInsets = UIEdgeInsets(top: 12, left: 24, bottom: 12, right: 24)
+//        
+        // Thêm loading vào giữa
+        addSubview(activityIndicator)
         NSLayoutConstraint.activate([
-            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            contentView.topAnchor.constraint(equalTo: topAnchor),
-            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
+            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
-    }
-    
-    // MARK: - Setup Default Style
-    private func setupViews() {
-        guard buttonSignIn != nil else { return }
-        contentView.backgroundColor = .clear
-        containerView.layer.cornerRadius = 15
-        containerView.clipsToBounds = true
-        containerView.backgroundColor = .clear
         
-        buttonSignIn.layer.cornerRadius = 15
-        buttonSignIn.backgroundColor = .systemBlue
-        buttonSignIn.setTitleColor(.white, for: .normal)
-        buttonSignIn.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
-        buttonSignIn.clipsToBounds = true
-
+        // Dùng Closure thay vì target/action lằng nhằng
+        addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
     
-    // MARK: - Public Config
+    @objc private func buttonTapped() {
+        onTap?()
+    }
+    
+    // MARK: - Config
     func config(
         title: String,
         backgroundColor: UIColor = .systemBlue,
@@ -71,19 +59,37 @@ class MButton: UIView {
         font: UIFont = .systemFont(ofSize: 17, weight: .semibold),
         cornerRadius: CGFloat = 15
     ) {
-        buttonSignIn.setTitle(title, for: .normal)
-        buttonSignIn.backgroundColor = backgroundColor
-        buttonSignIn.setTitleColor(titleColor, for: .normal)
-        buttonSignIn.titleLabel?.font = font
-        buttonSignIn.layer.cornerRadius = cornerRadius
-        containerView.layer.cornerRadius = cornerRadius
+        setTitle(title, for: .normal)
+        self.backgroundColor = backgroundColor
+        setTitleColor(titleColor, for: .normal)
+        titleLabel?.font = font
+        layer.cornerRadius = cornerRadius
     }
     
+    // MARK: - Loading
+    func showLoading(_ isLoading: Bool, titleWhenLoading: String? = nil) {
+        isEnabled = !isLoading
+        
+        if isLoading {
+            activityIndicator.startAnimating()
+            setTitle(titleWhenLoading, for: .normal)
+            alpha = 0.8
+        } else {
+            activityIndicator.stopAnimating()
+            alpha = 1.0
+        }
+    }
     
-    // MARK: - Action
-    var onTap: (() -> Void)?
+    // MARK: - IBInspectable (kéo thả trong Storyboard vẫn thấy đẹp luôn!)
+    @IBInspectable var titleText: String = "Button" {
+        didSet { setTitle(titleText, for: .normal) }
+    }
     
-    @IBAction private func buttonTapped(_ sender: UIButton) {
-        onTap?()
+    @IBInspectable var cornerRadius: CGFloat = 15 {
+        didSet { layer.cornerRadius = cornerRadius }
+    }
+    
+    @IBInspectable var buttonColor: UIColor = .systemBlue {
+        didSet { backgroundColor = buttonColor }
     }
 }

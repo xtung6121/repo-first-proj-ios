@@ -159,6 +159,11 @@
             <point key="canvasLocation" x="15" y="-2"/>
         </view>
     </objects>
+    <designables>
+        <designable name="uMn-oQ-EUZ">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+    </designables>
     <resources>
         <image name="Illustration-signup" width="213" height="165"/>
         <image name="Rectangle 33" width="375" height="704"/>

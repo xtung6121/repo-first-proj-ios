@@ -3,4 +3,220 @@
    uuid = "DB6D0B3B-EEA3-4205-A4E2-13ED2A2687C9"
    type = "1"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8B5E3D33-CD44-40FA-8454-7D5423296B21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Downloads/callback.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "31"
+            endingLineNumber = "31"
+            landmarkName = "DelegateButtonDelegate"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "12"
+            endingLineNumber = "12"
+            landmarkName = "MCollectionViews"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 495161f29365a677"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.imagesView.getter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - e8e82be9da205a03"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.imagesView.setter : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - a1a27b76d8120d06"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.imagesView.modify : Swift.Optional&lt;__C.UIImageView&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 1a7681c9b117ca46"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.imagesView.modify : Swift.Optional&lt;__C.UIImageView&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 233cb534ab4ef164"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.init(frame: __C.CGRect) -&gt; smart_ranking_badminton.MCollectionViews"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "212">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 1db507cdc9b09771"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;smart_ranking_badminton.MCollectionViews&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 9bcddb35680de1b3"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.lbText.getter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "19">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 5ef4dab90d045bf"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.lbText.setter : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 4afda6856c7c44da"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.lbText.modify : Swift.Optional&lt;__C.UILabel&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "0">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 302ced55e68d6f44"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.lbText.modify : Swift.Optional&lt;__C.UILabel&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/%3Ccompiler-generated%3E"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "26">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 233cb534ab4ef164"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.init(frame: __C.CGRect) -&gt; smart_ranking_badminton.MCollectionViews"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "199">
+               </Location>
+               <Location
+                  uuid = "5F822599-13DB-45C8-848B-7F5FBFA94DFC - 1db507cdc9b09771"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.MCollectionViews.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;smart_ranking_badminton.MCollectionViews&gt;"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/ReusableView/MCollectionViews.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "127">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
