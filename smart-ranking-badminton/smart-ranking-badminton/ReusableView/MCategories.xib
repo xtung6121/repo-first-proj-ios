@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MCategories">
+            <connections>
+                <outlet property="firstbtn" destination="BNx-n1-eur" id="d53-Ec-Ycr"/>
+                <outlet property="scBtn" destination="NNr-8l-xmW" id="Cbr-OG-XCq"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tea-i2-Tyq">
+                    <rect key="frame" x="0.0" y="0.0" width="300" height="300"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="KDo-IR-2yB">
+                            <rect key="frame" x="125.66666666666669" y="110.66666666666669" width="49" height="79"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BNx-n1-eur">
+                                    <rect key="frame" x="0.0" y="0.0" width="49" height="64"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NNr-8l-xmW">
+                                    <rect key="frame" x="0.0" y="67.999999999999986" width="49" height="11"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="11" id="9K0-9O-r2C"/>
+                                    </constraints>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain"/>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="49" id="9uE-EQ-y8T"/>
+                                <constraint firstAttribute="height" constant="79" id="UJc-QN-Wvv"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="KDo-IR-2yB" firstAttribute="centerX" secondItem="Tea-i2-Tyq" secondAttribute="centerX" id="80t-Zr-CfT"/>
+                        <constraint firstItem="KDo-IR-2yB" firstAttribute="centerY" secondItem="Tea-i2-Tyq" secondAttribute="centerY" id="oxd-ly-blV"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Tea-i2-Tyq" secondAttribute="trailing" id="6MY-om-nLF"/>
+                <constraint firstItem="Tea-i2-Tyq" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="T3A-93-Q9l"/>
+                <constraint firstAttribute="bottom" secondItem="Tea-i2-Tyq" secondAttribute="bottom" id="jxY-ch-U6R"/>
+                <constraint firstItem="Tea-i2-Tyq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="qgr-Db-f5C"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="13" y="-11"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

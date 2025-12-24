@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="smart_ranking_badminton" customModuleProvider="target">
             <connections>
+                <outlet property="btnChecked" destination="Cb0-yH-2tm" id="1Wj-5W-bWV"/>
+                <outlet property="btnNavtoSignIn" destination="BM6-Ga-wAY" id="sHG-Uz-RJJ"/>
+                <outlet property="btnSignUp" destination="uMn-oQ-EUZ" id="JLP-0u-xkX"/>
+                <outlet property="firstLbFooter" destination="qAb-BH-Q6b" id="7Rr-g1-cMp"/>
+                <outlet property="firstLbHeader" destination="Jgf-Tb-chI" id="w6v-s8-ezQ"/>
+                <outlet property="iiustrationImage" destination="2a7-IP-0f6" id="u1L-TD-3tg"/>
+                <outlet property="inputTextField" destination="UtL-1E-hXx" id="h8H-A9-zIt"/>
+                <outlet property="passwordTextField" destination="fiL-WK-Buo" id="3xa-Qv-Gzp"/>
+                <outlet property="secondLbHeader" destination="q5v-qF-dz4" id="YDr-dF-Fsx"/>
+                <outlet property="superBgImageView" destination="Wqc-I4-MCN" id="xN9-qS-bCv"/>
+                <outlet property="usernameTextField" destination="L8n-Rk-RET" id="pmY-W8-MaU"/>
                 <outlet property="view" destination="iN0-l3-epB" id="txd-FE-Hwu"/>
             </connections>
         </placeholder>
@@ -24,7 +34,7 @@
                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Rectangle 33" translatesAutoresizingMaskIntoConstraints="NO" id="P3g-XU-Xfn">
                     <rect key="frame" x="0.0" y="120" width="393" height="732"/>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-6f-dWu">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vF5-6f-dWu" userLabel="StackViewHeader">
                     <rect key="frame" x="24.000000000000004" y="144" width="41.333333333333343" height="45.666666666666657"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jgf-Tb-chI">
@@ -47,97 +57,90 @@
                         <constraint firstAttribute="height" constant="156" id="VJ7-l2-MOv"/>
                     </constraints>
                 </imageView>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7L8-Oa-5pF">
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="7L8-Oa-5pF" userLabel="StackViewTextField">
                     <rect key="frame" x="33" y="409.66666666666669" width="327" height="172.00000000000006"/>
                     <subviews>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iBw-5R-VZw">
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L8n-Rk-RET" userLabel="userNameTextField" customClass="MTextField" customModule="smart_ranking_badminton" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="S5o-8W-33e"/>
+                                <constraint firstAttribute="height" constant="44" id="pfB-Wr-K6I"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NCv-Jy-KB4">
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UtL-1E-hXx" userLabel="inputTextField" customClass="MTextField" customModule="smart_ranking_badminton" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="64" width="327" height="44"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="aSs-DR-Om7"/>
+                                <constraint firstAttribute="height" constant="44" id="uP8-RS-Aln"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
-                        <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7Nw-fN-K5y">
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fiL-WK-Buo" userLabel="passwordTextField" customClass="MTextField" customModule="smart_ranking_badminton" customModuleProvider="target">
                             <rect key="frame" x="0.0" y="127.99999999999994" width="327" height="44"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
-                                <constraint firstAttribute="height" constant="44" id="DUK-Me-Sqz"/>
+                                <constraint firstAttribute="height" constant="44" id="UE2-M8-AjA"/>
                             </constraints>
-                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                            <textInputTraits key="textInputTraits"/>
-                        </textField>
+                        </view>
                     </subviews>
                     <constraints>
+                        <constraint firstItem="fiL-WK-Buo" firstAttribute="top" secondItem="UtL-1E-hXx" secondAttribute="bottom" constant="19.999999999999943" id="QWv-Tn-d8n"/>
                         <constraint firstAttribute="width" constant="327" id="eS8-oC-tc9"/>
                     </constraints>
                 </stackView>
-                <stackView opaque="NO" contentMode="scaleToFill" alignment="firstBaseline" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="GwB-U8-7ap">
-                    <rect key="frame" x="33" y="601.66666666666663" width="151.66666666666666" height="24"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g6G-W4-xW8" userLabel="StackViewChecked">
+                    <rect key="frame" x="33" y="601.66666666666663" width="327" height="40"/>
                     <subviews>
-                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="47" translatesAutoresizingMaskIntoConstraints="NO" id="CUi-3A-VKe">
-                            <rect key="frame" x="0.0" y="0.0" width="33" height="24"/>
-                            <constraints>
-                                <constraint firstAttribute="width" constant="33" id="zqZ-M5-shs"/>
-                            </constraints>
-                        </imageView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eh1-WA-0g6">
-                            <rect key="frame" x="51" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wgv-zz-nGj">
-                            <rect key="frame" x="110.33333333333333" y="0.0" width="41.333333333333329" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cb0-yH-2tm" customClass="MChecked" customModule="smart_ranking_badminton" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="40"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
                     </subviews>
-                </stackView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5dg-qr-UBA">
-                    <rect key="frame" x="33" y="657.66666666666663" width="327" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="327" id="OoS-SF-aw8"/>
-                        <constraint firstAttribute="height" constant="44" id="wiE-XN-3zG"/>
+                        <constraint firstAttribute="width" constant="327" id="12G-QC-W1w"/>
+                        <constraint firstAttribute="height" constant="40" id="8z3-m2-G1q"/>
                     </constraints>
-                    <state key="normal" title="Button"/>
-                    <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                </button>
-                <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="6zj-DT-3rF">
-                    <rect key="frame" x="144.33333333333334" y="733.66666666666663" width="104.66666666666666" height="20.333333333333371"/>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="ctZ-QP-bcp" userLabel="StackViewBtn">
+                    <rect key="frame" x="33" y="652" width="327" height="44"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uMn-oQ-EUZ" userLabel="ButtonSignUp" customClass="MButton" customModule="smart_ranking_badminton" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="327" height="44"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="327" id="58N-JJ-Xbt"/>
+                        <constraint firstAttribute="height" constant="44" id="vZT-pR-YtA"/>
+                    </constraints>
+                </stackView>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="6zj-DT-3rF" userLabel="StackViewFooter">
+                    <rect key="frame" x="127.33333333333333" y="744" width="138.33333333333337" height="34.333333333333371"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qAb-BH-Q6b">
-                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="20.333333333333332"/>
+                            <rect key="frame" x="0.0" y="0.0" width="41.333333333333336" height="34.333333333333336"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mSR-GU-MWB">
-                            <rect key="frame" x="63.333333333333314" y="0.0" width="41.333333333333343" height="20.333333333333332"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM6-Ga-wAY">
+                            <rect key="frame" x="63.333333333333329" y="0.0" width="74.999999999999986" height="34.333333333333336"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            <connections>
+                                <action selector="btnSignInDidTap:" destination="-1" eventType="touchUpInside" id="qVE-q6-jZS"/>
+                            </connections>
+                        </button>
                     </subviews>
                 </stackView>
             </subviews>
-            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
             <constraints>
+                <constraint firstItem="ctZ-QP-bcp" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="19e-N2-RZf"/>
                 <constraint firstItem="6zj-DT-3rF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="1pd-ui-zN5"/>
-                <constraint firstItem="5dg-qr-UBA" firstAttribute="top" secondItem="GwB-U8-7ap" secondAttribute="bottom" constant="32" id="2QX-9q-QXr"/>
-                <constraint firstItem="GwB-U8-7ap" firstAttribute="top" secondItem="7L8-Oa-5pF" secondAttribute="bottom" constant="20" id="4lt-KZ-1jc"/>
+                <constraint firstItem="g6G-W4-xW8" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="33" id="4pM-ZP-GP3"/>
                 <constraint firstItem="P3g-XU-Xfn" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="120" id="5yn-hJ-F4E"/>
-                <constraint firstItem="vF5-6f-dWu" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="24" id="6oj-l0-UOr"/>
-                <constraint firstItem="GwB-U8-7ap" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="33" id="8uw-bv-R73"/>
+                <constraint firstItem="vF5-6f-dWu" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="6oj-l0-UOr"/>
+                <constraint firstAttribute="bottom" secondItem="ctZ-QP-bcp" secondAttribute="bottom" constant="156" id="8og-IQ-bDe"/>
                 <constraint firstAttribute="trailing" secondItem="Wqc-I4-MCN" secondAttribute="trailing" id="B08-rj-OjB"/>
                 <constraint firstAttribute="bottom" secondItem="P3g-XU-Xfn" secondAttribute="bottom" id="De8-XS-n1T"/>
                 <constraint firstItem="Wqc-I4-MCN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Ezz-12-1AU"/>
@@ -146,18 +149,22 @@
                 <constraint firstItem="7L8-Oa-5pF" firstAttribute="top" secondItem="2a7-IP-0f6" secondAttribute="bottom" constant="32" id="N9p-7S-Atv"/>
                 <constraint firstItem="2a7-IP-0f6" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="ORg-fr-ccl"/>
                 <constraint firstItem="7L8-Oa-5pF" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="QD4-Nq-RZ8"/>
+                <constraint firstItem="g6G-W4-xW8" firstAttribute="top" secondItem="7L8-Oa-5pF" secondAttribute="bottom" constant="20" id="WHS-nU-QNe"/>
                 <constraint firstItem="2a7-IP-0f6" firstAttribute="top" secondItem="vF5-6f-dWu" secondAttribute="bottom" constant="32" id="bxL-lB-Gzv"/>
                 <constraint firstAttribute="bottom" secondItem="Wqc-I4-MCN" secondAttribute="bottom" id="eKP-0f-sdj"/>
-                <constraint firstItem="6zj-DT-3rF" firstAttribute="top" secondItem="5dg-qr-UBA" secondAttribute="bottom" constant="32" id="guk-GA-z3T"/>
-                <constraint firstItem="5dg-qr-UBA" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="lTJ-Hp-ipb"/>
                 <constraint firstItem="Wqc-I4-MCN" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="lhi-U9-Gyc"/>
                 <constraint firstItem="vF5-6f-dWu" firstAttribute="top" secondItem="P3g-XU-Xfn" secondAttribute="top" constant="24" id="m2Z-x5-RVk"/>
+                <constraint firstItem="6zj-DT-3rF" firstAttribute="top" secondItem="ctZ-QP-bcp" secondAttribute="bottom" constant="48" id="mTC-7L-DKb"/>
             </constraints>
-            <point key="canvasLocation" x="13" y="-11"/>
+            <point key="canvasLocation" x="15" y="-2"/>
         </view>
     </objects>
+    <designables>
+        <designable name="uMn-oQ-EUZ">
+            <size key="intrinsicContentSize" width="30" height="33"/>
+        </designable>
+    </designables>
     <resources>
-        <image name="47" width="24" height="24"/>
         <image name="Illustration-signup" width="213" height="165"/>
         <image name="Rectangle 33" width="375" height="704"/>
         <systemColor name="systemBackgroundColor">
