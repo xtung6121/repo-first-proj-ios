@@ -3,52 +3,33 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MButton" customModule="smart_ranking_badminton" customModuleProvider="target">
             <connections>
-                <outlet property="buttonSignIn" destination="3oC-KA-yNK" id="QHz-1o-YW8"/>
-                <outlet property="containerView" destination="p0Y-0u-cex" id="csv-6e-4hE"/>
-                <outlet property="contentView" destination="iN0-l3-epB" id="5Hb-J0-hZN"/>
+                <outlet property="contentView" destination="0hQ-4C-cf1" id="eJW-Ho-W0L"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
-            <rect key="frame" x="0.0" y="0.0" width="393" height="99"/>
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p0Y-0u-cex">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="99"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3oC-KA-yNK">
-                            <rect key="frame" x="0.0" y="0.0" width="393" height="99"/>
-                            <state key="normal" title="Button"/>
-                            <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                        </button>
-                    </subviews>
-                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstItem="3oC-KA-yNK" firstAttribute="leading" secondItem="p0Y-0u-cex" secondAttribute="leading" id="4KU-Lc-a3L"/>
-                        <constraint firstItem="3oC-KA-yNK" firstAttribute="top" secondItem="p0Y-0u-cex" secondAttribute="top" id="Lk2-me-aZe"/>
-                        <constraint firstAttribute="trailing" secondItem="3oC-KA-yNK" secondAttribute="trailing" id="MTb-xE-vfR"/>
-                        <constraint firstAttribute="bottom" secondItem="3oC-KA-yNK" secondAttribute="bottom" id="siA-Tz-CnI"/>
-                    </constraints>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0hQ-4C-cf1">
+                    <rect key="frame" x="76" y="196" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </view>
             </subviews>
-            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-            <constraints>
-                <constraint firstItem="p0Y-0u-cex" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Qbq-zk-0IB"/>
-                <constraint firstAttribute="trailing" secondItem="p0Y-0u-cex" secondAttribute="trailing" id="SFq-9E-tcP"/>
-                <constraint firstItem="p0Y-0u-cex" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="cuk-HI-SdI"/>
-                <constraint firstAttribute="bottom" secondItem="p0Y-0u-cex" secondAttribute="bottom" id="d0s-Jk-Hz4"/>
-                <constraint firstAttribute="trailing" secondItem="p0Y-0u-cex" secondAttribute="trailing" id="gyb-6Y-Fqb"/>
-                <constraint firstItem="p0Y-0u-cex" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="h1S-Ff-mnv"/>
-                <constraint firstAttribute="bottom" secondItem="p0Y-0u-cex" secondAttribute="bottom" id="k50-iN-UxV"/>
-                <constraint firstItem="p0Y-0u-cex" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="wjc-Mk-MaT"/>
-            </constraints>
-            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="42" y="-11"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <point key="canvasLocation" x="13" y="-11"/>
         </view>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
