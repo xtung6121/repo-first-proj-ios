@@ -7,6 +7,7 @@
 
 import UIKit
 class CategoriesCollectionCell: UICollectionViewCell {
+    @IBOutlet weak var imgViewCollection: UIImageView!
     @IBOutlet weak var btnCollection: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()

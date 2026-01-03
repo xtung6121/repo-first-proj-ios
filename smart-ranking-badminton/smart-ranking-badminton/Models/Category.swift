@@ -12,13 +12,25 @@ struct Category: Hashable {
 
 extension Category {
     static func getDummyDatas() -> [Category] {
-        var categories: [Category] = []
-        
-        for i in 1...10 {
-            let category = Category(category: "\(i)", image: "\(i % 10)")
-            categories.append(category)
-        }
-        
-        return categories
+        return [
+            Category(category: "Vegan", image: "vegan.png"),
+            Category(category: "Drink", image: "drinks.png"),
+            Category(category: "Snacks", image: "snack.png"),
+            Category(category: "Vegan", image: "vegan.svg"),
+            Category(category: "Meal", image: "meal.png"),
+            Category(category: "Deresst", image: "snack.png"),
+        ]
     }
 }
+
+
+    struct BestSellerFood {
+        var image : String
+        var price : String
+        
+        init(image: String, price: String) {
+            self.image = image
+            self.price = price
+        }
+    }
+        

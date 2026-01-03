@@ -7,6 +7,8 @@ final class HomeViewController: UIViewController {
     @IBOutlet weak var bgContainerView: UIImageView!
     @IBOutlet weak var bgViewHeader: UIView!
     @IBOutlet weak var bgImageLayer: UIImageView!
+    @IBOutlet weak var bgViewHeaderLabel: UIView!
+    @IBOutlet weak var viewContent: UIView!
     @IBOutlet weak var searchTextField: MTextField!
     @IBOutlet weak var scrollContainer: UIScrollView!
     @IBOutlet weak var lbStackviewHeader: UILabel!
@@ -33,8 +35,9 @@ final class HomeViewController: UIViewController {
         setupUI()
         setupBackground()
         setupHeaderLabels()
-        setupDiscountView()
+        setupSearchTextField()
         setupCollectionViews()
+        setupDiscountView()
         applyInitialData() // data
     }
     
@@ -46,7 +49,12 @@ final class HomeViewController: UIViewController {
     }
     
     private func setupBackground() {
+        bgContainerView.backgroundColor = ColorSet.yellowPrimary.color
         bgImageLayer.image = UIImage(named: "Frame 6")
+        bgViewHeader.backgroundColor = .clear
+        bgViewHeaderLabel.backgroundColor = .clear
+        scrollContainer.backgroundColor = .clear
+        viewContent.backgroundColor = .clear
     }
     
     private func setupHeaderLabels() {
@@ -56,6 +64,10 @@ final class HomeViewController: UIViewController {
         
         scLbStackViewHeader.text = "Rise and shine! It's Breakfast Time"
         scLbStackViewHeader.textColor = .red
+    }
+    
+    private func setupSearchTextField() {
+        searchTextField.configView(placeHolder: "Search", textColor: .black, font: .systemFont(ofSize: 14))
     }
     
     private func setupDiscountView() {
@@ -73,14 +85,8 @@ final class HomeViewController: UIViewController {
         
         let registration = UICollectionView.CellRegistration<CategoriesCollectionCell, Category> { cell, indexPath, category in
             
-//                var contentConfiguration = cell.defaultContentConfiguration()
-//                contentConfiguration.text = "\(category)"
-//                contentConfiguration.textProperties.color = .lightGray
-                cell.contentView.backgroundColor = .systemPink.withAlphaComponent(0.3)
                 cell.layer.cornerRadius = 12
-                cell.layer.borderWidth = 1
-                cell.layer.borderColor = UIColor.red.cgColor
-//                cell.button.image = UIImage(named: category.image) ?? UIImage(systemName: "vegan")
+                cell.imgViewCollection?.image = UIImage(named: category.image)
         }
         
         categoriesDataSource = UICollectionViewDiffableDataSource<Int, Category>(collectionView: categoriesCollectionView) { collectionView, indexPath, category in
@@ -97,12 +103,10 @@ final class HomeViewController: UIViewController {
     
     private func configureBestSellersCollectionView() {
         let registration = UICollectionView.CellRegistration<BestSellerCollectionCell, Category> { cell, indexPath, category in
-            cell.imageCollectionView?.image = UIImage(named: category.image) ?? UIImage(systemName: "Rectangle 133")
+            cell.imageCollectionView.image = UIImage(named: category.image) ?? UIImage(systemName: "Rectangle 133")
             cell.titleLabel?.text = category.category
-            cell.contentView.backgroundColor = .systemPink.withAlphaComponent(0.3)
             cell.layer.cornerRadius = 12
             cell.layer.borderWidth = 1
-            cell.layer.borderColor = UIColor.blue.cgColor
 
         }
         
