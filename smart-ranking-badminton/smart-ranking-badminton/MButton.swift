@@ -1,57 +1,61 @@
+//
+//  MButton.swift
+//  smart-ranking-badminton
+//
+//  Created by macmimi on 03/12/25.
+//
+
 import UIKit
 
 @IBDesignable
-final class MButton: UIButton {
+class MButton: UIView {
     
-    // MARK: - Closure
-    var onTap: (() -> Void)?
-    
-    // Loading indicator
-    private lazy var activityIndicator: UIActivityIndicatorView = {
-        let indicator = UIActivityIndicatorView(style: .medium)
-        indicator.color = .white
-        indicator.hidesWhenStopped = true
-        indicator.translatesAutoresizingMaskIntoConstraints = false
-        return indicator
-    }()
+    @IBOutlet var contentView: UIView!
+    @IBOutlet weak private var button: UIButton!
+    @IBOutlet weak private var loadingIndicator: UIActivityIndicatorView!
     
     // MARK: - Init
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupButton()
+        loadXib()
+        setupViews()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        setupButton()
+        loadXib()
+        setupViews()
     }
     
-    // MARK: - Setup chung
-    private func setupButton() {
-        // Style mặc định đẹp
-        backgroundColor = .systemBlue
-        setTitleColor(.white, for: .normal)
-        titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
-        layer.cornerRadius = 15
-        clipsToBounds = true
-//        contentEdgeInsets = UIEdgeInsets(top: 12, left: 24, bottom: 12, right: 24)
-//        
-        // Thêm loading vào giữa
-        addSubview(activityIndicator)
-        NSLayoutConstraint.activate([
-            activityIndicator.centerXAnchor.constraint(equalTo: centerXAnchor),
-            activityIndicator.centerYAnchor.constraint(equalTo: centerYAnchor)
-        ])
+    private func loadXib() {
+        Bundle.main.loadNibNamed("MButton", owner: self, options: nil)
         
-        // Dùng Closure thay vì target/action lằng nhằng
-        addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
+        addSubview(contentView)
+        contentView.translatesAutoresizingMaskIntoConstraints = false
+        
+        NSLayoutConstraint.activate([
+            contentView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            contentView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            contentView.topAnchor.constraint(equalTo: topAnchor),
+            contentView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
     }
     
-    @objc private func buttonTapped() {
-        onTap?()
+    private func setupViews() {
+        // Style mặc định đẹp như app thật
+        button.layer.cornerRadius = 15
+        button.backgroundColor = .systemBlue
+        button.setTitleColor(.white, for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 17, weight: .semibold)
+        button.clipsToBounds = true
+        
+        loadingIndicator.hidesWhenStopped = true
+        loadingIndicator.style = UIActivityIndicatorView.Style.medium
+        loadingIndicator.stopAnimating()
     }
     
-    // MARK: - Config
+    // MARK: - Public Config Methods
+    
     func config(
         title: String,
         backgroundColor: UIColor = .systemBlue,
@@ -59,37 +63,68 @@ final class MButton: UIButton {
         font: UIFont = .systemFont(ofSize: 17, weight: .semibold),
         cornerRadius: CGFloat = 15
     ) {
-        setTitle(title, for: .normal)
-        self.backgroundColor = backgroundColor
-        setTitleColor(titleColor, for: .normal)
-        titleLabel?.font = font
-        layer.cornerRadius = cornerRadius
+        button.setTitle(title, for: .normal)
+        button.backgroundColor = backgroundColor
+        button.setTitleColor(titleColor, for: .normal)
+        button.titleLabel?.font = font
+        button.layer.cornerRadius = cornerRadius
     }
     
-    // MARK: - Loading
-    func showLoading(_ isLoading: Bool, titleWhenLoading: String? = nil) {
-        isEnabled = !isLoading
+    
+    func configWithImage(
+        title: String,
+        image: UIImage?,
+        backgroundColor: UIColor = .white,
+        titleColor: UIColor = .label,
+        borderColor: UIColor = .systemGray3
+    ) {
+        button.setTitle(title, for: .normal)
+        button.setImage(image?.withRenderingMode(.alwaysOriginal), for: .normal)
+        button.backgroundColor = backgroundColor
+        button.setTitleColor(titleColor, for: .normal)
+        button.layer.borderWidth = 1
+        button.layer.borderColor = borderColor.cgColor
         
+        // Căn icon + chữ đẹp
+        button.imageEdgeInsets = UIEdgeInsets(top: 0, left: -12, bottom: 0, right: 12)
+        button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 12, bottom: 0, right: -12)
+    }
+    
+    // Loading state
+    func showLoading(_ isLoading: Bool = true) {
         if isLoading {
-            activityIndicator.startAnimating()
-            setTitle(titleWhenLoading, for: .normal)
-            alpha = 0.8
+            button.setTitle("", for: .normal)
+            button.isEnabled = false
+            loadingIndicator.startAnimating()
         } else {
-            activityIndicator.stopAnimating()
-            alpha = 1.0
+            button.isEnabled = true
+            loadingIndicator.stopAnimating()
         }
     }
     
-    // MARK: - IBInspectable (kéo thả trong Storyboard vẫn thấy đẹp luôn!)
-    @IBInspectable var titleText: String = "Button" {
-        didSet { setTitle(titleText, for: .normal) }
-    }
+    // Action (giống UITextField có delegate thì button có closure)
+    var onTap: (() -> Void)?
     
-    @IBInspectable var cornerRadius: CGFloat = 15 {
-        didSet { layer.cornerRadius = cornerRadius }
-    }
-    
-    @IBInspectable var buttonColor: UIColor = .systemBlue {
-        didSet { backgroundColor = buttonColor }
+    @IBAction private func buttonTapped(_ sender: UIButton) {
+        onTap?()
     }
 }
+
+// MARK: - Dùng trong ViewController siêu dễ
+/*
+ let signInButton = MButton()
+ signInButton.config(title: "Đăng Nhập")
+ signInButton.onTap = {
+     print("Đã nhấn Đăng Nhập")
+     signInButton.showLoading(true)
+ }
+ 
+ let googleButton = MButton()
+ googleButton.configWithImage(
+     title: " Continue with Google",
+     image: UIImage(named: "google_logo"),
+     backgroundColor: .white,
+     titleColor: .black,
+     borderColor: .systemGray
+ )
+*/

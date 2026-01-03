@@ -1,86 +1,185 @@
+
 import UIKit
 
 final class HomeViewController: UIViewController {
 
-    @IBOutlet private weak var collectionView: UICollectionView!
+    // MARK: - Outlets
+    @IBOutlet weak var bgContainerView: UIImageView!
+    @IBOutlet weak var bgViewHeader: UIView!
+    @IBOutlet weak var bgImageLayer: UIImageView!
+    @IBOutlet weak var searchTextField: MTextField!
+    @IBOutlet weak var scrollContainer: UIScrollView!
+    @IBOutlet weak var lbStackviewHeader: UILabel!
+    @IBOutlet weak var scLbStackViewHeader: UILabel!
+    @IBOutlet weak var imageDiscountView: UIImageView!
     
+    @IBOutlet private weak var categoriesCollectionView: UICollectionView!
+    @IBOutlet private weak var bestSellerCollectionView: UICollectionView!
+    @IBOutlet private weak var recommendCollectionView: UICollectionView!
+    
+    // MARK: - Data
     private var categories: [Category] = Category.getDummyDatas()
+    private var bestSellers: [Category] = Category.getDummyDatas()
+    private var recommendFood: [Category] = Category.getDummyDatas()
     
-    private let cellReuseIdentifier = "MCollection"
+    // MARK: - Data Sources 
+    private var categoriesDataSource: UICollectionViewDiffableDataSource<Int, Category>!
+    private var bestSellersDataSource: UICollectionViewDiffableDataSource<Int, Category>!
+    private var recommendDataSource: UICollectionViewDiffableDataSource<Int, Category>!
     
+    // MARK: - View Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.isNavigationBarHidden = true
-        
-//        configureCollectionView()
+        setupUI()
+        setupBackground()
+        setupHeaderLabels()
+        setupDiscountView()
+        setupCollectionViews()
+        applyInitialData() // data
     }
     
-    private func configureCollectionView() {
-        // Register the nib for your custom cell
-        let nib = UINib(nibName: "MCollection", bundle: nil)
-        collectionView.register(nib, forCellWithReuseIdentifier: cellReuseIdentifier)
+    // MARK: - Setup UI
+    private func setupUI() {
+        view.backgroundColor = .white
+        navigationController?.isNavigationBarHidden = true
+        overrideUserInterfaceStyle = .light
+    }
+    
+    private func setupBackground() {
+        bgImageLayer.image = UIImage(named: "Frame 6")
+    }
+    
+    private func setupHeaderLabels() {
+        lbStackviewHeader.text = "Good Morning"
+        lbStackviewHeader.font = .systemFont(ofSize: 28, weight: .semibold)
+        lbStackviewHeader.textColor = .white
         
-        // Set delegate and data source
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        scLbStackViewHeader.text = "Rise and shine! It's Breakfast Time"
+        scLbStackViewHeader.textColor = .red
+    }
+    
+    private func setupDiscountView() {
+        imageDiscountView.image = UIImage(named: "Frame 71")
+    }
+    
+    // MARK: - Collection Views Setup
+    private func setupCollectionViews() {
+        configureCategoriesCollectionView()
+        configureBestSellersCollectionView()
+        configureRecommendCollectionView()
+    }
+    
+    private func configureCategoriesCollectionView() {
         
-        // Optional: improve performance and appearance
-        collectionView.backgroundColor = .clear
-        collectionView.showsVerticalScrollIndicator = false
-        collectionView.showsHorizontalScrollIndicator = false
+        let registration = UICollectionView.CellRegistration<CategoriesCollectionCell, Category> { cell, indexPath, category in
+            
+//                var contentConfiguration = cell.defaultContentConfiguration()
+//                contentConfiguration.text = "\(category)"
+//                contentConfiguration.textProperties.color = .lightGray
+                cell.contentView.backgroundColor = .systemPink.withAlphaComponent(0.3)
+                cell.layer.cornerRadius = 12
+                cell.layer.borderWidth = 1
+                cell.layer.borderColor = UIColor.red.cgColor
+//                cell.button.image = UIImage(named: category.image) ?? UIImage(systemName: "vegan")
+        }
+        
+        categoriesDataSource = UICollectionViewDiffableDataSource<Int, Category>(collectionView: categoriesCollectionView) { collectionView, indexPath, category in
+            collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: category)
+            
+            
+            
+        }
+        
+        categoriesCollectionView.delegate = self
+        categoriesCollectionView.backgroundColor = .clear
+        categoriesCollectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    private func configureBestSellersCollectionView() {
+        let registration = UICollectionView.CellRegistration<BestSellerCollectionCell, Category> { cell, indexPath, category in
+            cell.imageCollectionView?.image = UIImage(named: category.image) ?? UIImage(systemName: "Rectangle 133")
+            cell.titleLabel?.text = category.category
+            cell.contentView.backgroundColor = .systemPink.withAlphaComponent(0.3)
+            cell.layer.cornerRadius = 12
+            cell.layer.borderWidth = 1
+            cell.layer.borderColor = UIColor.blue.cgColor
+
+        }
+        
+        bestSellersDataSource = UICollectionViewDiffableDataSource<Int, Category>(collectionView: bestSellerCollectionView) { collectionView, indexPath, category in
+            collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: category)
+        }
+        
+        bestSellerCollectionView.delegate = self
+        bestSellerCollectionView.backgroundColor = .clear
+        bestSellerCollectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    private func configureRecommendCollectionView() {
+        let registration = UICollectionView.CellRegistration<RecommendCollectionCell, Category> { cell, indexPath, category in
+
+//            cell.imageCollectionView?.image = UIImage(named: category.image) ?? UIImage(systemName: "Rectangle 133")
+            cell.contentView.backgroundColor = .systemPink.withAlphaComponent(0.3)
+            cell.layer.cornerRadius = 12
+            cell.layer.borderWidth = 1
+            cell.layer.borderColor = UIColor.blue.cgColor
+        }
+        
+        recommendDataSource = UICollectionViewDiffableDataSource<Int, Category>(collectionView: recommendCollectionView) { collectionView, indexPath, category in
+            collectionView.dequeueConfiguredReusableCell(using: registration, for: indexPath, item: category)
+        }
+        
+        recommendCollectionView.delegate = self
+        recommendCollectionView.backgroundColor = .clear
+        recommendCollectionView.showsHorizontalScrollIndicator = false
+    }
+    
+    // MARK: - Apply Data // chưa hiểu lắm
+    private func applyInitialData() {
+        // Categories
+        var snapshot = NSDiffableDataSourceSnapshot<Int, Category>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(categories)
+        categoriesDataSource.apply(snapshot, animatingDifferences: false)
+        
+        // Best Sellers
+        snapshot = NSDiffableDataSourceSnapshot<Int, Category>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(bestSellers)
+        bestSellersDataSource.apply(snapshot, animatingDifferences: false)
+        
+        // Recommend
+        snapshot = NSDiffableDataSourceSnapshot<Int, Category>()
+        snapshot.appendSections([0])
+        snapshot.appendItems(recommendFood)
+        recommendDataSource.apply(snapshot, animatingDifferences: false)
     }
 }
 
-extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegate {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return categories.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(
-            withReuseIdentifier: cellReuseIdentifier,
-            for: indexPath
-        ) as? MCollection else {
-            fatalError("Failed to dequeue MCollection. Check that the reuse identifier and nib name match.")
-        }
-        
-        let category = categories[indexPath.item]
-        
-        cell.btnAction.setTitle(category.category, for: .normal)
-        cell.iconImageView.image = UIImage(named: category.image) ?? UIImage(systemName: "photo")
-        
-        return cell
-    }
-    
-    // Optional: Add selection handling if needed
+// MARK: - UICollectionViewDelegate (chỉ để bắt chọn item)
+extension HomeViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
         
-        let selectedCategory = categories[indexPath.row]
-        print("Selected category: \(selectedCategory.category)")
-        // Perform navigation or action here
+        // Lấy item được chọn từ dataSource tương ứng
+        let dataSource = collectionView.dataSource as? UICollectionViewDiffableDataSource<Int, Category>
+        guard let category = dataSource?.itemIdentifier(for: indexPath) else { return }
+        
+        let type: String
+        if collectionView == categoriesCollectionView {
+            type = "Categories"
+        } else if collectionView == bestSellerCollectionView {
+            type = "Best Sellers"
+        } else {
+            type = "Recommend"
+        }
+        
+        print("Selected from \(type): \(category.category)")
     }
 }
 
-// MARK: - Optional: UICollectionViewDelegateFlowLayout (for custom sizing)
-
+// MARK: - UICollectionViewDelegateFlowLayout (custom layout)
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView,
-                        layout collectionViewLayout: UICollectionViewLayout,
-                        sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        // Example: 2 columns with spacing
-        let padding: CGFloat = 16
-        let interItemSpacing: CGFloat = 12
-        let availableWidth = collectionView.bounds.width - (padding * 2) - interItemSpacing
-        let itemWidth = availableWidth / 2
-        
-        return CGSize(width: itemWidth, height: itemWidth * 1.2) // Adjust ratio as needed
-    }
-    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         insetForSectionAt section: Int) -> UIEdgeInsets {

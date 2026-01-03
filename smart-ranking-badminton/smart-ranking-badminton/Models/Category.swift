@@ -1,6 +1,6 @@
 import Foundation
 
-final class Category {
+struct Category: Hashable {
     var image: String
     var category: String
     
@@ -14,7 +14,7 @@ extension Category {
     static func getDummyDatas() -> [Category] {
         var categories: [Category] = []
         
-        for i in 1...5 {
+        for i in 1...10 {
             let category = Category(category: "\(i)", image: "\(i % 10)")
             categories.append(category)
         }

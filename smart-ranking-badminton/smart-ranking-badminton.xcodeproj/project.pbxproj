@@ -18,19 +18,27 @@
 		151257D32EDB42CA007227AB /* AppFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257D22EDB42CA007227AB /* AppFlowController.swift */; };
 		151257D52EDB42F7007227AB /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257D42EDB42F7007227AB /* AuthManager.swift */; };
 		151257D92EDB4384007227AB /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257D82EDB4384007227AB /* Category.swift */; };
-		151257DB2EDB43FB007227AB /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151257DA2EDB43FB007227AB /* HomeViewController.xib */; };
+		1513BF322F0699C600D898B6 /* RecommendCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1513BF312F0699C600D898B6 /* RecommendCollectionCell.swift */; };
+		1513BF342F0699FD00D898B6 /* RecommendCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1513BF332F0699FD00D898B6 /* RecommendCollectionCell.xib */; };
 		151F7C592EDF52CE00BA3E45 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F7C572EDF52CE00BA3E45 /* LoginViewController.swift */; };
 		151F7C5A2EDF52CE00BA3E45 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151F7C582EDF52CE00BA3E45 /* LoginViewController.xib */; };
 		151F7C682EE0701C00BA3E45 /* MButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F7C672EE0701C00BA3E45 /* MButton.swift */; };
-		151F7C6D2EE078F300BA3E45 /* MTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 151F7C6C2EE078F300BA3E45 /* MTextField.xib */; };
-		151F7C6F2EE0791100BA3E45 /* MTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151F7C6E2EE0791100BA3E45 /* MTextField.swift */; };
 		155271172EEF11BD00240C60 /* MCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 155271162EEF11BD00240C60 /* MCategories.swift */; };
 		155271192EEF11D500240C60 /* MCategories.xib in Resources */ = {isa = PBXBuildFile; fileRef = 155271182EEF11D500240C60 /* MCategories.xib */; };
+		15567B302EFD6F41002408B1 /* BestSellerCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15567B2F2EFD6F41002408B1 /* BestSellerCollectionCell.swift */; };
+		15567B322EFD6F56002408B1 /* BestSellerCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15567B312EFD6F56002408B1 /* BestSellerCollectionCell.xib */; };
+		156B190C2EFB9EF500539B97 /* MTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B190B2EFB9EF500539B97 /* MTextField.swift */; };
+		156B190E2EFB9F0B00539B97 /* MTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = 156B190D2EFB9F0B00539B97 /* MTextField.xib */; };
+		156B19142EFBDE3900539B97 /* LayoutConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 156B19132EFBDE3900539B97 /* LayoutConstants.swift */; };
 		1589DAEB2EE2DEF700A04BBB /* MChecked.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1589DAEA2EE2DEF700A04BBB /* MChecked.swift */; };
 		1589DAED2EE2DF1800A04BBB /* MChecked.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1589DAEC2EE2DF1800A04BBB /* MChecked.xib */; };
+		159DA7AB2EFBE74D00B39402 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159DA7AA2EFBE74D00B39402 /* HomeViewModel.swift */; };
+		159DA7AD2EFC40F200B39402 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159DA7AC2EFC40F200B39402 /* HomeViewController.xib */; };
+		159DA7B32EFC52B200B39402 /* MButtonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 159DA7B22EFC52B200B39402 /* MButtonConfig.swift */; };
+		159DA7B52EFC52C700B39402 /* MButtonConfig.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159DA7B42EFC52C700B39402 /* MButtonConfig.xib */; };
 		159E8FB62EE175110061AAB3 /* MButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 159E8FB52EE175100061AAB3 /* MButton.xib */; };
-		15BC490D2EED732E00E200EE /* MCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC490C2EED732E00E200EE /* MCollection.swift */; };
-		15BC490F2EED737200E200EE /* MCollection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC490E2EED737200E200EE /* MCollection.xib */; };
+		15BC490D2EED732E00E200EE /* CategoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15BC490C2EED732E00E200EE /* CategoriesCollectionCell.swift */; };
+		15BC490F2EED737200E200EE /* CategoriesCollectionCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 15BC490E2EED737200E200EE /* CategoriesCollectionCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,19 +55,27 @@
 		151257D22EDB42CA007227AB /* AppFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppFlowController.swift; sourceTree = "<group>"; };
 		151257D42EDB42F7007227AB /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		151257D82EDB4384007227AB /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
-		151257DA2EDB43FB007227AB /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		1513BF312F0699C600D898B6 /* RecommendCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecommendCollectionCell.swift; sourceTree = "<group>"; };
+		1513BF332F0699FD00D898B6 /* RecommendCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecommendCollectionCell.xib; sourceTree = "<group>"; };
 		151F7C572EDF52CE00BA3E45 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LoginViewController.swift; path = ../../../../../../../Downloads/LoginViewController.swift; sourceTree = "<group>"; };
 		151F7C582EDF52CE00BA3E45 /* LoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LoginViewController.xib; path = ../../../../../../../Downloads/LoginViewController.xib; sourceTree = "<group>"; };
 		151F7C672EE0701C00BA3E45 /* MButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MButton.swift; sourceTree = "<group>"; };
-		151F7C6C2EE078F300BA3E45 /* MTextField.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = MTextField.xib; path = ../../../../../Downloads/MTextField.xib; sourceTree = "<group>"; };
-		151F7C6E2EE0791100BA3E45 /* MTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MTextField.swift; path = ../../../../../Downloads/MTextField.swift; sourceTree = "<group>"; };
 		155271162EEF11BD00240C60 /* MCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCategories.swift; sourceTree = "<group>"; };
 		155271182EEF11D500240C60 /* MCategories.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCategories.xib; sourceTree = "<group>"; };
+		15567B2F2EFD6F41002408B1 /* BestSellerCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BestSellerCollectionCell.swift; sourceTree = "<group>"; };
+		15567B312EFD6F56002408B1 /* BestSellerCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BestSellerCollectionCell.xib; sourceTree = "<group>"; };
+		156B190B2EFB9EF500539B97 /* MTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MTextField.swift; sourceTree = "<group>"; };
+		156B190D2EFB9F0B00539B97 /* MTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MTextField.xib; sourceTree = "<group>"; };
+		156B19132EFBDE3900539B97 /* LayoutConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutConstants.swift; sourceTree = "<group>"; };
 		1589DAEA2EE2DEF700A04BBB /* MChecked.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MChecked.swift; sourceTree = "<group>"; };
 		1589DAEC2EE2DF1800A04BBB /* MChecked.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MChecked.xib; sourceTree = "<group>"; };
+		159DA7AA2EFBE74D00B39402 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		159DA7AC2EFC40F200B39402 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
+		159DA7B22EFC52B200B39402 /* MButtonConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MButtonConfig.swift; sourceTree = "<group>"; };
+		159DA7B42EFC52C700B39402 /* MButtonConfig.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MButtonConfig.xib; sourceTree = "<group>"; };
 		159E8FB52EE175100061AAB3 /* MButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MButton.xib; sourceTree = "<group>"; };
-		15BC490C2EED732E00E200EE /* MCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MCollection.swift; sourceTree = "<group>"; };
-		15BC490E2EED737200E200EE /* MCollection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MCollection.xib; sourceTree = "<group>"; };
+		15BC490C2EED732E00E200EE /* CategoriesCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesCollectionCell.swift; sourceTree = "<group>"; };
+		15BC490E2EED737200E200EE /* CategoriesCollectionCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoriesCollectionCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,7 +108,9 @@
 		151257B22ED9F2B6007227AB /* smart-ranking-badminton */ = {
 			isa = PBXGroup;
 			children = (
-				15E772FE2EEBB201000802DF /* CollectionView */,
+				156B19112EFBDD1700539B97 /* Utilities */,
+				156B19102EFBC1CF00539B97 /* ViewModels */,
+				156B190F2EFBC1B000539B97 /* Models */,
 				151F7C642EE06FDB00BA3E45 /* ReusableView */,
 				151257C92ED9FA2E007227AB /* Views */,
 				151257B32ED9F2B6007227AB /* AppDelegate.swift */,
@@ -102,10 +120,6 @@
 				151257C12ED9F2B9007227AB /* Info.plist */,
 				151257D22EDB42CA007227AB /* AppFlowController.swift */,
 				151257D42EDB42F7007227AB /* AuthManager.swift */,
-				151F7C6C2EE078F300BA3E45 /* MTextField.xib */,
-				151F7C6E2EE0791100BA3E45 /* MTextField.swift */,
-				151F7C672EE0701C00BA3E45 /* MButton.swift */,
-				159E8FB52EE175100061AAB3 /* MButton.xib */,
 				151256B92EE97C7B002D1812 /* callback.swift */,
 			);
 			path = "smart-ranking-badminton";
@@ -132,6 +146,7 @@
 		151257C92ED9FA2E007227AB /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				15567B2E2EFD6F23002408B1 /* CollectionView */,
 				151257DC2EDB44BA007227AB /* Main */,
 				151257C72ED9FA17007227AB /* Login */,
 				151257C82ED9FA21007227AB /* SignUp */,
@@ -142,9 +157,8 @@
 		151257DC2EDB44BA007227AB /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				151257D82EDB4384007227AB /* Category.swift */,
-				151257DA2EDB43FB007227AB /* HomeViewController.xib */,
 				151257B72ED9F2B6007227AB /* HomeViewController.swift */,
+				159DA7AC2EFC40F200B39402 /* HomeViewController.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -152,21 +166,63 @@
 		151F7C642EE06FDB00BA3E45 /* ReusableView */ = {
 			isa = PBXGroup;
 			children = (
+				151F7C672EE0701C00BA3E45 /* MButton.swift */,
+				159E8FB52EE175100061AAB3 /* MButton.xib */,
 				1589DAEA2EE2DEF700A04BBB /* MChecked.swift */,
 				1589DAEC2EE2DF1800A04BBB /* MChecked.xib */,
-				15BC490C2EED732E00E200EE /* MCollection.swift */,
-				15BC490E2EED737200E200EE /* MCollection.xib */,
 				155271162EEF11BD00240C60 /* MCategories.swift */,
 				155271182EEF11D500240C60 /* MCategories.xib */,
+				156B190B2EFB9EF500539B97 /* MTextField.swift */,
+				156B190D2EFB9F0B00539B97 /* MTextField.xib */,
+				159DA7B22EFC52B200B39402 /* MButtonConfig.swift */,
+				159DA7B42EFC52C700B39402 /* MButtonConfig.xib */,
 			);
 			path = ReusableView;
 			sourceTree = "<group>";
 		};
-		15E772FE2EEBB201000802DF /* CollectionView */ = {
+		15567B2E2EFD6F23002408B1 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				1513BF312F0699C600D898B6 /* RecommendCollectionCell.swift */,
+				1513BF332F0699FD00D898B6 /* RecommendCollectionCell.xib */,
+				15567B2F2EFD6F41002408B1 /* BestSellerCollectionCell.swift */,
+				15567B312EFD6F56002408B1 /* BestSellerCollectionCell.xib */,
+				15BC490C2EED732E00E200EE /* CategoriesCollectionCell.swift */,
+				15BC490E2EED737200E200EE /* CategoriesCollectionCell.xib */,
 			);
 			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		156B190F2EFBC1B000539B97 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				151257D82EDB4384007227AB /* Category.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		156B19102EFBC1CF00539B97 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				159DA7AA2EFBE74D00B39402 /* HomeViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		156B19112EFBDD1700539B97 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				156B19122EFBDE0200539B97 /* Constants */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		156B19122EFBDE0200539B97 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				156B19132EFBDE3900539B97 /* LayoutConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -227,16 +283,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				15BC490F2EED737200E200EE /* MCollection.xib in Resources */,
+				15BC490F2EED737200E200EE /* CategoriesCollectionCell.xib in Resources */,
+				1513BF342F0699FD00D898B6 /* RecommendCollectionCell.xib in Resources */,
 				151257C02ED9F2B9007227AB /* LaunchScreen.storyboard in Resources */,
+				159DA7B52EFC52C700B39402 /* MButtonConfig.xib in Resources */,
 				1589DAED2EE2DF1800A04BBB /* MChecked.xib in Resources */,
 				151257D12EDA0083007227AB /* SignUpViewController.xib in Resources */,
-				151257DB2EDB43FB007227AB /* HomeViewController.xib in Resources */,
 				151257BD2ED9F2B9007227AB /* Assets.xcassets in Resources */,
-				151F7C6D2EE078F300BA3E45 /* MTextField.xib in Resources */,
+				15567B322EFD6F56002408B1 /* BestSellerCollectionCell.xib in Resources */,
 				151F7C5A2EDF52CE00BA3E45 /* LoginViewController.xib in Resources */,
 				159E8FB62EE175110061AAB3 /* MButton.xib in Resources */,
 				155271192EEF11D500240C60 /* MCategories.xib in Resources */,
+				156B190E2EFB9F0B00539B97 /* MTextField.xib in Resources */,
+				159DA7AD2EFC40F200B39402 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -247,20 +306,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				15567B302EFD6F41002408B1 /* BestSellerCollectionCell.swift in Sources */,
+				159DA7AB2EFBE74D00B39402 /* HomeViewModel.swift in Sources */,
+				1513BF322F0699C600D898B6 /* RecommendCollectionCell.swift in Sources */,
 				151F7C592EDF52CE00BA3E45 /* LoginViewController.swift in Sources */,
+				156B190C2EFB9EF500539B97 /* MTextField.swift in Sources */,
 				1589DAEB2EE2DEF700A04BBB /* MChecked.swift in Sources */,
 				151257D52EDB42F7007227AB /* AuthManager.swift in Sources */,
 				151257B82ED9F2B6007227AB /* HomeViewController.swift in Sources */,
-				151F7C6F2EE0791100BA3E45 /* MTextField.swift in Sources */,
 				151257B42ED9F2B6007227AB /* AppDelegate.swift in Sources */,
 				151257D32EDB42CA007227AB /* AppFlowController.swift in Sources */,
 				151257D92EDB4384007227AB /* Category.swift in Sources */,
 				151F7C682EE0701C00BA3E45 /* MButton.swift in Sources */,
 				151256BA2EE97C7B002D1812 /* callback.swift in Sources */,
+				156B19142EFBDE3900539B97 /* LayoutConstants.swift in Sources */,
+				159DA7B32EFC52B200B39402 /* MButtonConfig.swift in Sources */,
 				151257B62ED9F2B6007227AB /* SceneDelegate.swift in Sources */,
 				155271172EEF11BD00240C60 /* MCategories.swift in Sources */,
 				151257CF2EDA006C007227AB /* SignUpViewController.swift in Sources */,
-				15BC490D2EED732E00E200EE /* MCollection.swift in Sources */,
+				15BC490D2EED732E00E200EE /* CategoriesCollectionCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
