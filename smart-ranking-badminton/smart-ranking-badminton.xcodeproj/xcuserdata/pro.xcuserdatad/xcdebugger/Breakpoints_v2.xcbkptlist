@@ -218,5 +218,149 @@
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B73C82EA-110E-4E28-93F0-94752E5DE035"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smart-ranking-badminton/Views/Main/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "172"
+            endingLineNumber = "172"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BFB4DBDE-86C8-46F5-8EB7-19D89505305C"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smart-ranking-badminton/Views/Main/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "159"
+            endingLineNumber = "159"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2CB4C483-83F5-4D87-B5CC-079B138D80ED"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smart-ranking-badminton/Views/Main/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "135"
+            endingLineNumber = "135"
+            landmarkName = "setupCategoryCell(index:collectionView:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "06006E1D-1181-46CA-8725-23DFDB964B74"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smart-ranking-badminton/Views/Main/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "157"
+            endingLineNumber = "157"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "06006E1D-1181-46CA-8725-23DFDB964B74 - d638599e3fe7ae2c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.HomeViewController.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/Views/Main/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "144"
+                  endingLineNumber = "144"
+                  offsetFromSymbolStart = "685">
+               </Location>
+               <Location
+                  uuid = "06006E1D-1181-46CA-8725-23DFDB964B74 - d638599e3fe7ae0f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.HomeViewController.collectionView(_: __C.UICollectionView, numberOfItemsInSection: Swift.Int) -&gt; Swift.Int"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/Views/Main/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "143"
+                  endingLineNumber = "143"
+                  offsetFromSymbolStart = "108">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1BAC8D43-3071-4897-81C6-72AAE4FA85F1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "smart-ranking-badminton/Views/Main/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "134"
+            endingLineNumber = "134"
+            landmarkName = "setupCategoryCell(index:collectionView:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1BAC8D43-3071-4897-81C6-72AAE4FA85F1 - 5df41d49bf728111"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.HomeViewController.setupCategoryCell(index: Foundation.IndexPath, collectionView: __C.UICollectionView) -&gt; __C.UICollectionViewCell"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/Views/Main/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "138"
+                  endingLineNumber = "138"
+                  offsetFromSymbolStart = "139">
+               </Location>
+               <Location
+                  uuid = "1BAC8D43-3071-4897-81C6-72AAE4FA85F1 - 5df41d49bf7281f0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "smart_ranking_badminton.HomeViewController.setupCategoryCell(index: Foundation.IndexPath, collectionView: __C.UICollectionView) -&gt; __C.UICollectionViewCell"
+                  moduleName = "smart-ranking-badminton"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/pro/Desktop/my-project/smart-ranking-badminton/smart-ranking-badminton/smart-ranking-badminton/Views/Main/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "139"
+                  endingLineNumber = "139"
+                  offsetFromSymbolStart = "139">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

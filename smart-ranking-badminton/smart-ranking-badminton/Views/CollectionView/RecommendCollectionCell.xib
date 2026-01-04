@@ -9,7 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Moo-SS-6v2">
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Moo-SS-6v2" customClass="RecommendCollectionCell" customModule="smart_ranking_badminton" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="172" height="168"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="CTc-0f-7wW">
@@ -50,6 +50,12 @@
                 </constraints>
             </collectionViewCellContentView>
             <size key="customSize" width="172" height="168"/>
+            <connections>
+                <outlet property="firstBtnCollection" destination="qXD-eR-NmX" id="pfn-Sw-Wqh"/>
+                <outlet property="lbCollectionView" destination="eSu-9i-c6u" id="URa-YV-IcN"/>
+                <outlet property="secondBtnCollection" destination="hxC-jL-Ony" id="50a-Vb-0LQ"/>
+                <outlet property="uiimageView" destination="MOp-G7-Bg6" id="R2H-ec-pT9"/>
+            </connections>
             <point key="canvasLocation" x="-522.13740458015263" y="-192.95774647887325"/>
         </collectionViewCell>
     </objects>
