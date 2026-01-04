@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150EB2182F09729400540BA1 /* LeagueSpartan-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 150EB2172F09727A00540BA1 /* LeagueSpartan-VariableFont_wght.ttf */; };
 		151256BA2EE97C7B002D1812 /* callback.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151256B92EE97C7B002D1812 /* callback.swift */; };
 		151257B42ED9F2B6007227AB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257B32ED9F2B6007227AB /* AppDelegate.swift */; };
 		151257B62ED9F2B6007227AB /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 151257B52ED9F2B6007227AB /* SceneDelegate.swift */; };
@@ -42,6 +43,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		150EB2172F09727A00540BA1 /* LeagueSpartan-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LeagueSpartan-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		151256B92EE97C7B002D1812 /* callback.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = callback.swift; path = ../../../../../Downloads/callback.swift; sourceTree = "<group>"; };
 		151257B02ED9F2B6007227AB /* smart-ranking-badminton.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "smart-ranking-badminton.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		151257B32ED9F2B6007227AB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -89,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		150EB2162F096F1400540BA1 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				150EB2172F09727A00540BA1 /* LeagueSpartan-VariableFont_wght.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
 		151257A72ED9F2B6007227AB = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +118,7 @@
 		151257B22ED9F2B6007227AB /* smart-ranking-badminton */ = {
 			isa = PBXGroup;
 			children = (
+				150EB2162F096F1400540BA1 /* fonts */,
 				156B19112EFBDD1700539B97 /* Utilities */,
 				156B19102EFBC1CF00539B97 /* ViewModels */,
 				156B190F2EFBC1B000539B97 /* Models */,
@@ -295,6 +306,7 @@
 				159E8FB62EE175110061AAB3 /* MButton.xib in Resources */,
 				155271192EEF11D500240C60 /* MCategories.xib in Resources */,
 				156B190E2EFB9F0B00539B97 /* MTextField.xib in Resources */,
+				150EB2182F09729400540BA1 /* LeagueSpartan-VariableFont_wght.ttf in Resources */,
 				159DA7AD2EFC40F200B39402 /* HomeViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

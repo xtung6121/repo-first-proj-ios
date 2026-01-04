@@ -41,11 +41,12 @@ class MTextField: UIView {
     }
     
     private func setupViews() {
-        contentView.backgroundColor = .white
+        contentView.backgroundColor = .clear
         containerView.layer.cornerRadius = 15
         containerView.layer.borderWidth = 0.4
         containerView.layer.borderColor = UIColor.black.cgColor
         containerView.clipsToBounds = true
+        containerView.backgroundColor = .clear
     }
     
     func configView(text: String = "",
